@@ -15,6 +15,23 @@ function layout(){
 
 }
 function initIndex() {
+    $('.bxBanner').bxSlider({
+        controls:false,
+        auto:true,
+    });
+    $('.swiper-wrapper').bxSlider({
+        pager:false,
+        controls:true,
+        auto:true,
+        minSlides:5,
+        maxSlides:5,
+        moveSlides:1,
+        slideWidth:185,
+        nextSelector:'#swiper_next',
+        prevSelector:'#swiper_prev',
+        nextText: '',
+        prevText: ''
+    });
     TweenMax.from($('.visualBg img'),1,{transform:'perspective(1000px) translateX(0px) rotateX(0deg) scale(1.5)', ease:Sine.easeInOut,delay:0, opacity:0})
     TweenMax.from($('.indexVisual .slogan'),1,{transform:'perspective(1000px) translateX(0px) rotateX(0deg) scale(.5)', ease:Back.easeOut.config(3),delay:2.5, opacity:0})
     TweenMax.from($('.indexVisual .img_visual'),2,{marginTop:'300px',transform:'perspective(1000px) translateX(0px) rotateX(0deg) scale(2.5)', ease:Back.easeOut.config(3),delay:1, opacity:0})
@@ -22,11 +39,11 @@ function initIndex() {
     TweenMax.from($('.indexVisual .txt_bottom'),1,{marginTop:'50px', transform:'perspective(1000px) translateX(0px) rotateX(0deg) scale(1)', ease:Power0.easeNone,delay:4, opacity:0})
     TweenMax.from($('.indexVisual .btn'),1,{transform:'perspective(1000px) translateX(-400px) rotateX(0deg) scale(1)', ease:Back.easeOut.config(2),delay:5, opacity:0})
 //    TweenMax.to($('.visualBg img'),10,{transform:'perspective(1000px) translateX(0px) rotateX(0deg) scale(1.1)', ease:Sine.easeInOut,delay:1, opacity:1,repeat:-1, yoyo:true,})
-    TweenMax.from($('#business dd img').eq(0),0.5,{transform:'perspective(1000px) translateX(-100px) rotateY(180deg) scale(1)', ease:Sine.easeInOut,delay:0, opacity:0})
-    TweenMax.from($('#business dd img').eq(1),0.5,{transform:'perspective(1000px) translateX(-100px) rotateY(180deg) scale(1)', ease:Sine.easeInOut,delay:0.3, opacity:0})
-    TweenMax.from($('#business dd img').eq(2),0.5,{transform:'perspective(1000px) translateX(-100px) rotateY(180deg) scale(1)', ease:Sine.easeInOut,delay:0.6, opacity:0})
-    TweenMax.from($('#business dd img').eq(3),0.5,{transform:'perspective(1000px) translateX(-100px) rotateY(180deg) scale(1)', ease:Sine.easeInOut,delay:0.9, opacity:0})
-    TweenMax.from($('#business dd img').eq(4),0.5,{transform:'perspective(1000px) translateX(-100px) rotateY(180deg) scale(1)', ease:Sine.easeInOut,delay:1.2, opacity:0})
+    TweenMax.from($('#business dd img').eq(0),0.5,{transform:'perspective(1000px) rotateY(180deg) scale(1)',left:'-100px', ease:Sine.easeInOut,delay:0, opacity:0})
+    TweenMax.from($('#business dd img').eq(1),0.5,{transform:'perspective(1000px) rotateY(180deg) scale(1)',left:'-100px', ease:Sine.easeInOut,delay:0.3, opacity:0})
+    TweenMax.from($('#business dd img').eq(2),0.5,{transform:'perspective(1000px) rotateY(180deg) scale(1)',left:'-100px', ease:Sine.easeInOut,delay:0.6, opacity:0})
+    TweenMax.from($('#business dd img').eq(3),0.5,{transform:'perspective(1000px) rotateY(180deg) scale(1)',left:'-100px', ease:Sine.easeInOut,delay:0.9, opacity:0})
+    TweenMax.from($('#business dd img').eq(4),0.5,{transform:'perspective(1000px) rotateY(180deg) scale(1)',left:'-100px', ease:Sine.easeInOut,delay:1.2, opacity:0})
 
     var e1 = $('.indexVisual .txt_bottom li').eq(0)
     var e2 = $('.indexVisual .txt_bottom li').eq(1)
@@ -35,6 +52,7 @@ function initIndex() {
     var e5 = $('.indexVisual .txt_bottom li').eq(4)
     var tl = new TimelineMax({repeat:-1, yoyo:true, repeatDelay:0});
     tl.staggerTo([e1, e2, e3, e4, e5], 1, {marginTop:'10px',color:'#fff', transform:'perspective(1000px) translateX(0px) rotateX(0deg) scale(1)', ease: Power3.easeIn,delay:0, opacity:0},0.1);
+    
 }
 
 
@@ -95,7 +113,7 @@ function init() {
         }
     })
     $("#directLink .directArea>ul>li>a").eq(0).click();
-    $("#favorite .favoMenu a").each(function(){
+    $("#favorite .favoMenu a, .qickLink li a").each(function(){
         var image = $(this).find("img");
         var imgsrc = image.attr("src");
         $(this).mouseover(function(){

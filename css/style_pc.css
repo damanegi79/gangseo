@@ -88,7 +88,10 @@ textarea{border: 1px solid #e0e0e0;box-sizing: border-box; padding: 10px;}
 #visualArea{background-color: #eae9e3; height: 273px; background: url(../images/pc/bg_visual.jpg) repeat-x 0 0;overflow: hidden;}
 #visualArea .visualBg{}
 #visualArea .indexBanner{position: absolute; right: 0; top: ; background-color: #fff; width: 250px; height: 235px; top: 20px; overflow: hidden;}
-#visualArea .bannerCon{width: 210px; height: 250px; overflow: hidden; text-align: center; margin: 19px 0 0 21px;}
+#visualArea .bannerCon{width: 210px; height: 250px; text-align: center; margin: 19px 0 0 21px;}
+#visualArea .indexBanner .bx-pager .bx-pager-item{display: inline-block;}
+#visualArea .indexBanner .bx-pager .bx-pager-item a{display:inline-block;margin: 0 3px; width: 10px; height: 10px; box-sizing: border-box; border: 1px solid #888888; background-color: #fff; text-indent: -9999px; overflow: hidden; border-radius: 100%;}
+#visualArea .indexBanner .bx-pager .bx-pager-item a.active{background-color: #888888;}
 #visualArea .swiper-pagination{bottom:0px;  padding: 0 10px; box-sizing: border-box; position: absolute; width: 100%;}
 #visualArea .bannerCon .bannerImg{height: 217px;}
 #visualArea .swiper-pagination-bullet{ margin: 0 3px; width: 10px; height: 10px; box-sizing: border-box; border: 1px solid #888888; background-color: #fff;}
@@ -113,7 +116,7 @@ textarea{border: 1px solid #e0e0e0;box-sizing: border-box; padding: 10px;}
 #business dl dt span:after{display: block; background-color: #fff; content: ""; height: 2px; width:23px; position: absolute; top:10px;}
 #business dl dd{float: left;}
 #business dl dd a{position: relative; display: block; transition: all 0.3s ease; overflow: hidden;}
-#business dl dd a img{transform: perspective(1000px);}
+#business dl dd a img{transform: perspective(1000px); position: relative;}
 #business dl dd a:after{display: block; content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; box-sizing: border-box; transition: all 0.3s ease;}
 #business dl dd a:hover:after{ border:3px solid #fff; border-radius: 10px;}
 #business dl dd a:hover{transform: perspective(1000px) translateY(-10px);  border-radius: 10px;}
@@ -134,9 +137,9 @@ textarea{border: 1px solid #e0e0e0;box-sizing: border-box; padding: 10px;}
 
 #favorite .favoMenu .swiper-wrapper .swiper-slide p.favo.wide a{ padding-left: 110px;}
 #favorite .favoMenu .swiper-wrapper .swiper-slide p.favo.wide a img{left: 25px}
-#favorite .favoMenu .swiper-button-next{ width: 20px; height: 33px; background-size: 15px auto; right:0; background: url(../images/pc/btn_arrow_r.png) no-repeat; margin-top: -15px;}
+#favorite .favoMenu .swiper-button-next a{ width: 20px; height: 33px; background-size: 15px auto; right:0; background: url(../images/pc/btn_arrow_r.png) no-repeat; margin-top: -15px; position: absolute; right: 0; top: 50px; z-index: 50;}
 #favorite .favoMenu .swiper-button-next svg{fill:#333; background-color: #fff;}
-#favorite .favoMenu .swiper-button-prev{ width: 20px; height: 33px; background-size: 15px auto; left: 0; background: url(../images/pc/btn_arrow_l.png) no-repeat;margin-top: -15px;}
+#favorite .favoMenu .swiper-button-prev a{ width: 20px; height: 33px; background-size: 15px auto; left: 0; background: url(../images/pc/btn_arrow_l.png) no-repeat;margin-top: -15px; position: absolute; left: 0; top: 50px; z-index: 50;}
 
 #indexContent{padding: 20px 0; border-bottom: 1px solid #dee1e5;}
 #indexContent .introduce{float: left;}
@@ -154,14 +157,14 @@ textarea{border: 1px solid #e0e0e0;box-sizing: border-box; padding: 10px;}
 #indexContent .bbsArea .bbsList li span.date{float: right; color:#777;}
 
 
-#indexContent .qickLink{float:right; width: 210px;}
-#indexContent .qickLink li{float: left; text-align: center; margin-left: 25px; font-size: 14px; color: #2c3147; font-weight: bold; margin-bottom: 10px; transition: all 0.5s ease; position: relative;}
-#indexContent .qickLink li a{display: block; text-align: center; margin-bottom: 2px; transition: all 0.2s ease;width: 73px; height: 73px; overflow: hidden;border-radius: 100%; background-color: #f4f4f4; position: relative; z-index: 10; box-sizing: border-box;}
+#indexContent .qickLink{float:right; width: 210px; margin-top: 23px; box-sizing: border-box; padding-left: 35px;}
+#indexContent .qickLink li{float: left; text-align: center; font-size: 14px; color: #2c3147; margin-bottom: 30px; transition: all 0.5s ease; position: relative; width: 72px; margin-left: 15px;}
+#indexContent .qickLink li a{display: block; text-align: center; margin-bottom: 2px; transition: all 0.2s ease;overflow: hidden;border-radius: 100%; position: relative; z-index: 10; box-sizing: border-box;}
 #indexContent .qickLink li a img{ transition: all 0.5s ease;}
 #indexContent .qickLink li:hover{color: #09f;}
-#indexContent .qickLink li:hover a{transform: perspective(1000px) translateY(-10px);}
-#indexContent .qickLink li:after{content: ""; display: block; border-radius: 100%; width: 73px; height: 73px; position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.2); z-index: 1;  opacity: 0;transition: all 0.2s ease;transform: perspective(1000px) scale(1); transform-origin: center bottom;}
-#indexContent .qickLink li:hover:after{opacity: 1;transform: perspective(1000px) scale(0.6) translateY(0px); box-shadow:0 0 20px rgba(0,0,0,0.5);}
+/*#indexContent .qickLink li:hover a{transform: perspective(1000px) translateY(-10px);}*/
+/*#indexContent .qickLink li:after{content: ""; display: block; border-radius: 100%; width: 73px; height: 73px; position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.2); z-index: 1;  opacity: 0;transition: all 0.2s ease;transform: perspective(1000px) scale(1); transform-origin: center bottom;}*/
+/*#indexContent .qickLink li:hover:after{opacity: 1;transform: perspective(1000px) scale(0.6) translateY(0px); box-shadow:0 0 20px rgba(0,0,0,0.5);}*/
 #indexContent .qickLink li a:hover img{transform: perspective(1000px);}
 
 
