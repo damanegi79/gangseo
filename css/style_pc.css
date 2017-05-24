@@ -107,8 +107,13 @@ textarea{border: 1px solid #e0e0e0;box-sizing: border-box; padding: 10px;}
 #visualArea .img_visual {position: absolute; left: 20px; top:100px;}
 #visualArea .btn {position: absolute; left:67px; top:200px;}
 #visualArea .txt_top {position: absolute; left:83px; top:102px;}
-#visualArea .txt_bottom {position: absolute; left:100px; top:138px;}
-#visualArea .txt_bottom li{float: left; clear: #000; font-size: 20px; font-weight: bold; }
+#visualArea .txt_bottom {position: absolute; left:100px; top:140px;}
+#visualArea .txt_bottom li{float: left; clear: #000; font-size: 22px; font-weight: bold; }
+#visualArea .txt_bottom li.txt01{color:#a62b01;}
+#visualArea .txt_bottom li.txt02{color:#c63300;}
+#visualArea .txt_bottom li.txt03{color:#d04f02;}
+#visualArea .txt_bottom li.txt04{color:#e0650b;}
+#visualArea .txt_bottom li.txt05{color:#e37524;}
 
 /*#business {background-color: #1d3e71; padding: 30px 0;}*/
 #business {background-color: #e37524; padding: 25px 0;}
@@ -162,9 +167,9 @@ textarea{border: 1px solid #e0e0e0;box-sizing: border-box; padding: 10px;}
 #indexContent .qickLink li a{display: block; text-align: center; margin-bottom: 2px; transition: all 0.2s ease;overflow: hidden;border-radius: 100%; position: relative; z-index: 10; box-sizing: border-box;}
 #indexContent .qickLink li a img{ transition: all 0.5s ease;}
 #indexContent .qickLink li:hover{color: #09f;}
-/*#indexContent .qickLink li:hover a{transform: perspective(1000px) translateY(-10px);}*/
-/*#indexContent .qickLink li:after{content: ""; display: block; border-radius: 100%; width: 73px; height: 73px; position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.2); z-index: 1;  opacity: 0;transition: all 0.2s ease;transform: perspective(1000px) scale(1); transform-origin: center bottom;}*/
-/*#indexContent .qickLink li:hover:after{opacity: 1;transform: perspective(1000px) scale(0.6) translateY(0px); box-shadow:0 0 20px rgba(0,0,0,0.5);}*/
+#indexContent .qickLink li:hover a{transform: perspective(1000px) translateY(-10px);}
+#indexContent .qickLink li:after{content: ""; display: block; border-radius: 100%; width: 62px; height: 62px; position: absolute; left: 5px; top: 0; background-color: rgba(0,0,0,0.2); z-index: 1;  opacity: 0;transition: all 0.2s ease;transform: perspective(1000px) scale(1); transform-origin: center bottom;}
+#indexContent .qickLink li:hover:after{opacity: 1;transform: perspective(1000px) scale(0.6) translateY(0px); box-shadow:0 0 20px rgba(0,0,0,0.5);}
 #indexContent .qickLink li a:hover img{transform: perspective(1000px);}
 
 
